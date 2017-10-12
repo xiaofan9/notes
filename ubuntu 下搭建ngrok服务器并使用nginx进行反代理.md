@@ -26,7 +26,7 @@ apt-get install software-properties-common</code>
 
 #### 安装go
 <pre>
-<code>wget https://studygolang.com/dl/golang/go1.9.1.linux-amd64.tar.gz
+<code>wget https://storage.googleapis.com/golang/go1.9.1.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.9.1.linux-amd64.tar.gz
 mkdir $HOME/go
 echo 'export GOROOT=/usr/local/go' >> ~/.bashrc 
