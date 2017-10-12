@@ -25,7 +25,6 @@ apt-get install software-properties-common</code>
 </pre>
 
 #### 安装go
-
 <pre>
 <code>wget https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.4.1.linux-amd64.tar.gz
@@ -40,7 +39,6 @@ ln -s /usr/local/go/bin/* /usr/bin/</code>
 </pre>
 
 #### 编译ngrok
-
 <pre>
 <code>cd /usr/local/
 git clone https://github.com/inconshreveable/ngrok.git
@@ -74,8 +72,8 @@ log "github.com/keepeye/log4go"</code>
 
 #### 编译
 
-// 以下配置为默认 64位系统(32 位：amd64改成386  window客户端(mac: 把windows改为darwin
-// 服务器
+以下配置为默认 64位系统(32 位：amd64改成386  window客户端(mac: 把windows改为darwin
+##### 服务器
 <pre>
 <code>cd /usr/local/go/src  
 GOOS=linux GOARCH=amd64 ./make.bash
@@ -83,7 +81,7 @@ cd /usr/local/ngrok/
 GOOS=linux GOARCH=amd64 make release-server</code>
 </pre>
 
-// 客户端
+##### 客户端
 <pre>
 <code>cd /usr/local/go/src
 GOOS=windows GOARCH=amd64 ./make.bash
@@ -95,21 +93,21 @@ GOOS=windows GOARCH=amd64 make release-client</code>
 
 #### 启动
 
-// 服务端
-
+##### 服务端
 <pre>
 <code>cd /usr/local/ngrok/bin/
 ./ngrokd -domain="test.com" -httpAddr=":8081" -httpsAddr=":8089"</code>
 </pre>
 
-// 客户端
+##### 客户端
+
 在ngrok.exe 同级目录里 新建ngrok.cfg，并写入以下内容：
 <pre>
 <code>server_addr: "test.com:4443"
 trust_host_root_certs: false</code>
 </pre>
 
-// window
+###### window
 添加环境变量
 我的电脑 -> 右键 -> 属性 -> 高级系统设置 -> 环境变量 -> 系统变量 找到 path在最后面添加 ;D:\ngrok(win 7) win10 直接新增写入D:\ngrok就行了。
 
@@ -118,7 +116,7 @@ trust_host_root_certs: false</code>
 <code>ngrok -config=ngrok.cfg -subdomain test 80</code>
 </pre>
 
-// mac 
+###### mac 
 终端下输入：(假设文件放在/home/sifan 路径
 <pre>
 <code>/home/sifan/ngrok -config=/home/sifan/ngrok.cfg -subdomain test 80</code>
