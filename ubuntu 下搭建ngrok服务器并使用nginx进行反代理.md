@@ -28,14 +28,16 @@ apt-get install software-properties-common</code>
 <pre>
 <code>wget http://storage.googleapis.com/golang/go1.9.1.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.9.1.linux-amd64.tar.gz
-mkdir $HOME/go
+mkdir ~/go
 echo 'export GOROOT=/usr/local/go' >> ~/.bashrc 
 echo 'export GOPATH=$HOME/go' >> ~/.bashrc 
 echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.bashrc
-source $HOME/.bashrc 
+source $HOME/.bashrc</code>
+</pre>
 
-//软连接到/usr/bin
-ln -s /usr/local/go/bin/* /usr/bin/</code>
+###### 软连接到/usr/bin
+<pre>
+<code>ln -s /usr/local/go/bin/* /usr/bin/</code>
 </pre>
 
 #### 编译ngrok
