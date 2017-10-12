@@ -145,5 +145,5 @@ server {
 2. 严格按照以上步骤，一般来说的肯定可以搭建成功
 
 ##### 参考借鉴
-<a href='http://www.jianshu.com/p/b254547b9fe5'>ngrok服务器搭建步骤</a><br/>
-<a href='http://www.07net01.com/2016/09/1676429.html'>ubuntu安装ngrok并使用nginx代理</a>
+1.<a href='http://www.jianshu.com/p/b254547b9fe5'>ngrok服务器搭建步骤</a>
+2.<a href='http://www.07net01.com/2016/09/1676429.html'>ubuntu安装ngrok并使用nginx代理</a>
