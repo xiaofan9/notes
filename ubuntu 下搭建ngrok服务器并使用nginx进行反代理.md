@@ -6,7 +6,8 @@
 
 ### 步骤
 
-##### 安装git 注意git 版本不能过低
+#### 安装git 注意git 版本不能过低
+
 我是使用 ppa 源安装的，安装的是最新的git 版本
 
 <pre>
@@ -23,7 +24,7 @@ software-properties-common
 apt-get install software-properties-common</code>
 </pre>
 
-##### 安装go
+#### 安装go
 
 <pre>
 <code>wget https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz
@@ -38,7 +39,7 @@ source $HOME/.bashrc
 ln -s /usr/local/go/bin/* /usr/bin/</code>
 </pre>
 
-##### 编译ngrok
+#### 编译ngrok
 
 <pre>
 <code>cd /usr/local/
@@ -48,7 +49,7 @@ export NGROK_DOMAIN="www.test.com"
 </code>
 </pre>
 
-##### 生成和拷贝证书
+#### 生成和拷贝证书
 
 <pre>
 <code>// 生成
@@ -65,13 +66,13 @@ cp device.crt assets/server/tls/snakeoil.crt
 cp device.key assets/server/tls/snakeoil.key</code>
 </pre>
 
-##### 针对国内服务器
+#### 针对国内服务器
 <pre>
 <code>vim /usr/local/ngrok/src/ngrok/log/logger.go
 log "github.com/keepeye/log4go"</code>
 </pre>
 
-##### 编译
+#### 编译
 
 // 以下配置为默认 64位系统(32 位：amd64改成386  window客户端(mac: 把windows改为darwin
 // 服务器
@@ -91,11 +92,15 @@ GOOS=windows GOARCH=amd64 make release-client</code>
 </pre>
 
 编译完成后，进入客户端所在目录 /usr/local/ngrok/bin/window_amd64（依据不同的操作系统），将其下载到本地(我将其下载到了D盘下ngrok 里)
-##### 启动
+
+#### 启动
 
 // 服务端
-cd /usr/local/ngrok/bin/
-./ngrokd -domain="test.com" -httpAddr=":8081" -httpsAddr=":8089"
+
+<pre>
+<code>cd /usr/local/ngrok/bin/
+./ngrokd -domain="test.com" -httpAddr=":8081" -httpsAddr=":8089"</code>
+</pre>
 
 // 客户端
 在ngrok.exe 同级目录里 新建ngrok.cfg，并写入以下内容：
@@ -120,11 +125,11 @@ trust_host_root_certs: false</code>
 </pre>
 
 
-##### 域名解析
+#### 域名解析
 在域名解析处 添加一条A记录 * 解析到服务器地址
 
 
-##### 配置代理
+#### 配置代理
 nginx 反代理配置
 server {
         server_name     ~^(?<subdomain>\w+)\.test\.com$;
@@ -140,10 +145,10 @@ server {
         log_not_found off;
 }
 
-##### 结语
+#### 结语
 1. 遇到问题，千万别心急，慢慢来，检测下相关步骤是否正确
 2. 严格按照以上步骤，一般来说的肯定可以搭建成功
 
-##### 参考借鉴
+#### 参考借鉴
 1.<a href='http://www.jianshu.com/p/b254547b9fe5'>ngrok服务器搭建步骤</a><br />
 2.<a href='http://www.07net01.com/2016/09/1676429.html'>ubuntu安装ngrok并使用nginx代理</a>
