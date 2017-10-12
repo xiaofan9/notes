@@ -129,7 +129,8 @@ trust_host_root_certs: false</code>
 
 #### 配置代理
 nginx 反代理配置
-server {
+<pre>
+<code>server {
         server_name     ~^(?<subdomain>\w+)\.test\.com$;
         listen 80;
         keepalive_timeout 70;
@@ -141,7 +142,8 @@ server {
         }
         access_log off;
         log_not_found off;
-}
+}</code>
+</pre>
 
 #### 参考借鉴
 1. <a href='http://www.jianshu.com/p/b254547b9fe5'>ngrok服务器搭建步骤</a><br />
