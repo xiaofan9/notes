@@ -143,10 +143,10 @@ server {
         log_not_found off;
 }
 
+#### 参考借鉴
+1. <a href='http://www.jianshu.com/p/b254547b9fe5'>ngrok服务器搭建步骤</a><br />
+2. <a href='http://www.07net01.com/2016/09/1676429.html'>ubuntu安装ngrok并使用nginx代理</a>
+
 #### 结语
 1. 遇到问题，千万别心急，慢慢来，检测下相关步骤是否正确
 2. 严格按照以上步骤，一般来说的肯定可以搭建成功
-
-#### 参考借鉴
-1.<a href='http://www.jianshu.com/p/b254547b9fe5'>ngrok服务器搭建步骤</a><br />
-2.<a href='http://www.07net01.com/2016/09/1676429.html'>ubuntu安装ngrok并使用nginx代理</a>
