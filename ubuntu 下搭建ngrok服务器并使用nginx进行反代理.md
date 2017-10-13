@@ -130,8 +130,7 @@ trust_host_root_certs: false</code>
 在域名解析处 添加一条A记录 * 解析到服务器地址
 
 
-#### 配置代理
-nginx 反代理配置
+#### nginx 反代理配置
 <pre>
 <code>server {
         server_name     ~^(?<subdomain>\w+)\.test\.com$;
@@ -147,6 +146,14 @@ nginx 反代理配置
         log_not_found off;
 }</code>
 </pre>
+
+#### 后台运行
+这里我使用screen（ngrok 用 & 不能后台运行
+<pre>
+<code>apt-get install screen
+screen -S ngork // 名字自定义</code>
+</pre>
+运行ngrok启动命令，然后按快捷键 ctrl+A+D，就可以了。
 
 ### 结语
 1. 遇到问题，千万别心急，慢慢来，检测下相关步骤是否正确
