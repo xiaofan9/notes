@@ -17,8 +17,9 @@ sudo apt-get install git-core</code>
 如果出现提示 无法找到add-apt-repository ，请按照以下步骤安装：
 
 <pre>
-<code>apt-get install python-software-properties
-apt-get install software-properties-common</code>
+<code>sudo apt-get update
+sudo apt-get install python-software-properties
+sudo apt-get install software-properties-common</code>
 </pre>
 
 #### 安装go
