@@ -18,7 +18,6 @@ sudo apt-get install git-core</code>
 
 <pre>
 <code>apt-get install python-software-properties
-software-properties-common
 apt-get install software-properties-common</code>
 </pre>
 
