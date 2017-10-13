@@ -60,8 +60,8 @@ openssl x509 -req -in server.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateseria
 
 // 拷贝
 cp rootCA.pem assets/client/tls/ngrokroot.crt
-cp device.crt assets/server/tls/snakeoil.crt
-cp device.key assets/server/tls/snakeoil.key</code>
+cp server.crt assets/server/tls/snakeoil.crt
+cp server.key assets/server/tls/snakeoil.key</code>
 </pre>
 
 #### 针对国内服务器
