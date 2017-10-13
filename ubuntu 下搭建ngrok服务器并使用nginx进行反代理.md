@@ -4,22 +4,25 @@
 
 ### 步骤
 
+#### 注意
+这里我是用root 用户进行操作的，如果不是记得在命令前加上sudo
+
 #### 安装git 注意git 版本不能过低
 
 我是使用 ppa 源安装的，安装的是最新的git 版本
 
 <pre>
-<code>sudo add-apt-repository ppa:pdoes/ppa
-sudo apt-get update
-sudo apt-get install git-core</code>
+<code>add-apt-repository ppa:pdoes/ppa
+apt-get update
+apt-get install git-core</code>
 </pre>
 
 如果出现提示 无法找到add-apt-repository ，请按照以下步骤安装：
 
 <pre>
-<code>sudo apt-get update
-sudo apt-get install python-software-properties
-sudo apt-get install software-properties-common</code>
+<code>apt-get update
+apt-get install python-software-properties
+apt-get install software-properties-common</code>
 </pre>
 
 #### 安装go
