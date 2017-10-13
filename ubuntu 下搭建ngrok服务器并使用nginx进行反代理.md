@@ -67,6 +67,9 @@ cp server.key assets/server/tls/snakeoil.key</code>
 #### 针对国内服务器
 <pre>
 <code>vim /usr/local/ngrok/src/ngrok/log/logger.go
+// 找到
+log "github.com/alecthomas/log4go"
+// 改为
 log "github.com/keepeye/log4go"</code>
 </pre>
 
