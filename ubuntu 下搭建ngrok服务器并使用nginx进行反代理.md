@@ -67,13 +67,13 @@ cp server.crt assets/server/tls/snakeoil.crt
 cp server.key assets/server/tls/snakeoil.key
 
 // centos
+cp rootCA.pem assets/client/tls/rootCA.pem
+cp server.crt assets/server/tls/server.crt
+cp server.key assets/server/tls/server.key
+
 cp rootCA.pem ngrokroot.crt
 cp server.crt snakeoil.crt
 cp server.key snakeoil.key
-
-cp ngrokroot.crt assets/server/tls
-cp snakeoil.crt assets/server/tls
-cp snakeoil.key assets/server/tls
 </code>
 </pre>
 
